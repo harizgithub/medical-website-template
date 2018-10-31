@@ -1,0 +1,274 @@
+$primary-color:#1B5299;
+$secondary-color: #9FC2CC;
+$font-color: #FCFCFC;
+$dark-overlay: rgba(0, 0, 0, 0.7);
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+// navbar 
+.navbar {
+    .nav-link {
+        color: $font-color;
+        text-transform: none;
+        font-weight: 400;
+    }
+    .navbar-toggler {
+        border: none;
+        background: transparent !important;
+    }
+    .navbar-toggler:focus {
+        outline: none;
+        background: transparent !important;
+    }
+    .navbar-toggler .icon-bar {
+        background-color: #fff;
+        transform: rotate(0deg) translate(0px, 0px);
+        transition: ease all .2s;
+    }
+    .navbar-toggler .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+    .navbar-toggler .icon-bar+.icon-bar {
+        margin-top: 4px;
+    }
+    .icon-bar:nth-child(2) {
+        width: 16px;
+        transition: ease all .2s;
+    }
+    .navbar-toggler:hover>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+    }
+    .navbar-toggler:active>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+    }
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 4px);
+        transition: ease all .2s;
+    }
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+        opacity: 0;
+        transition: ease all .2s;
+    }
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+        transition: ease all .2s;
+    }
+    .navbar-brand {
+        display: none;
+    }
+    .navbar-brand-mobile {
+        color: $font-color;
+    }
+}
+
+.navbar-custom {
+    background-color: $primary-color;
+}
+
+// header section
+.header-section {
+    background-image: url(https://images.unsplash.com/photo-1519781542704-957ff19eff00?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c351475860e8248dcd543ebbba1aa24f&auto=format&fit=crop&w=1446&q=80);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #FCFCFC;
+    padding: 10%;
+    font-size: 1em;
+    h2 {
+        padding-top: 6%;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, $primary-color, $secondary-color);
+        opacity: .6;
+    }
+}
+
+// about section
+.about-section {
+    img {
+        display: none;
+    }
+}
+
+// meet-our-doctors section
+.m-o-d {
+    background-image: url(https://images.unsplash.com/photo-1526288926180-808e4003905e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b1e73c679d646e1e29b9748c4a57d6f&auto=format&fit=crop&w=1367&q=80);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, $primary-color, $secondary-color);
+        opacity: .9;
+    }
+    .display-4 {
+        padding-top: 4%;
+    }
+    color: $font-color;
+}
+
+// contact-section
+#contact-section {
+    a {
+        font-size: 1.5rem;
+    }
+    .fa {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        color: $primary-color;
+    }
+    a {
+        color: black;
+    }
+    a:hover {
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+// Map-Section
+.map-section {
+    background-image: url(https://images.unsplash.com/photo-1476385822777-70eabacbd41f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b0e9f207fa54083e8fcf8ce9abf320f&auto=format&fit=crop&w=1267&q=80);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right, $primary-color, $primary-color);
+        opacity: .9;
+    }
+    color: $font-color;
+    .fa-chevron-circle-up {
+        display: none;
+    }
+}
+
+.map-section:hover {
+    cursor: pointer;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+// footer
+.footer {
+    .fa:hover {
+        text-decoration: none;
+    }
+}
+
+// Responsiveness
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 320px) {
+    .contact-section {
+        .display-3 {
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .services-section {
+        margin-top: -5%;
+    }
+    .about-section {
+        img {
+            display: none;
+        }
+        img:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .services-section {
+        margin-top: -5%;
+    }
+    .about-section {
+        img {
+            display: block;
+        }
+    }
+    .contact-section {
+        .display-3 {
+            font-size: 4em;
+            text-align: left;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .navbar-custom {
+        height: 14%;
+        box-shadow: none;
+        background-color: transparent;
+        transition-duration: 0.6s;
+        .navbar-brand {
+            display: block;
+            padding-top: 2%;
+        }
+        .navbar-brand-mobile {
+            display: none;
+        }
+    }
+    .navbar-On-Scroll {
+        height: 7%;
+        box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.3);
+        background-color: $primary-color;
+        transition-duration: 0.6s;
+        font-size: 1rem;
+    }
+}
+
+.services-section {
+    margin-top: -5%;
+}
+
+.about-section {
+    img {
+        display: block;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .services-section {
+        margin-top: -5%;
+    }
+    .about-section {
+        img {
+            display: block;
+        }
+    }
+}

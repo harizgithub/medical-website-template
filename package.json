@@ -1,0 +1,23 @@
+{
+  "name": "bs4starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "deploy": "gh-pages -d src"
+  },
+  "author": "Hari Patel",
+  "license": "ISC",
+  "homepage":"https:harizgithub.github.io/medical-website-template",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.4",
+    "font-awesome": "^4.7.0",
+    "gh-pages": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
